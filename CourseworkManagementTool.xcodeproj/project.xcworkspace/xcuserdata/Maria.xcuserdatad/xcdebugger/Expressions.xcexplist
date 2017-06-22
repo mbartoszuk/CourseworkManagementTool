@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "DetailViewController.tableView(UITableView, cellForRowAt : IndexPath) -&gt; UITableViewCell:DetailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "task.task_name">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DetailViewController.updateFetchedResultsController() -&gt; ():DetailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.detailItem.coursework_name">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DetailViewController.configureView() -&gt; ():DetailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "detail.coursework_create_date">
+            </PersistentString>
+            <PersistentString
+               value = "detail.coursework_due_date">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DetailViewController.tableView(UITableView, numberOfRowsInSection : Int) -&gt; Int:DetailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.detailItem.tasks.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

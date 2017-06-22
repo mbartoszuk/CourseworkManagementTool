@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Coursework" representedClassName="Coursework" syncable="YES" codeGenerationType="class">
+        <attribute name="coursework_assigned_value" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="coursework_create_date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="coursework_due_date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="coursework_mark" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="coursework_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="coursework_notes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="module_level" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="module_name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="reminders" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Reminder" inverseName="coursework" inverseEntity="Reminder" syncable="YES"/>
+        <relationship name="tasks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Task" inverseName="coursework" inverseEntity="Task" syncable="YES"/>
+    </entity>
+    <entity name="Reminder" representedClassName="Reminder" syncable="YES" codeGenerationType="class">
+        <attribute name="reminder_date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="reminder_title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="coursework" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Coursework" inverseName="reminders" inverseEntity="Coursework" syncable="YES"/>
+    </entity>
+    <entity name="Task" representedClassName="Task" syncable="YES" codeGenerationType="class">
+        <attribute name="coursework_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="progress" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="task_finish_date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="task_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="task_notes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="task_start_date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="coursework" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Coursework" inverseName="tasks" inverseEntity="Coursework" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Coursework" positionX="-81" positionY="-9" width="155" height="193"/>
+        <element name="Task" positionX="225" positionY="-18" width="128" height="148"/>
+        <element name="Reminder" positionX="232" positionY="209" width="128" height="88"/>
+    </elements>
+</model>
